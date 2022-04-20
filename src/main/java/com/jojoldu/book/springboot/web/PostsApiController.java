@@ -30,6 +30,13 @@ public class PostsApiController {
     public PostsResponseDto findById(@PathVariable Long id) {
         return postsService.findById(id);
     }
+
+    //삭제 API
+    @DeleteMapping("/api/v1/posts/{id}")
+    public Long delete(@PathVariable Long id) {
+        postsService.delete(id);
+        return id;
+    }
 }
 /**
  * {id}는 템플릿 변수이고, 이 값을 @PathVariable을 붙인 파라미터 변수 값으로 사용한다.
@@ -39,4 +46,11 @@ public class PostsApiController {
  * Request는 요청 Http Body의 내용을 자바 객체로 변환
  * Response는 자바 객체를 응답 Http Body에 담는다.
  *
+ * REST규약 메서드
+ * 생성(Create) - POST
+ * 읽기(Read) - GET
+ * 수정(Update) - PUT
+ * 삭제(Delete) - DELETE
+ *
+ * 실제 CRUD요청을 받아 service로 처리하는 컨트롤러이다.
  */
