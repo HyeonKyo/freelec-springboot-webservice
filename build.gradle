@@ -7,7 +7,6 @@ plugins { // (1)
 
 group 'com.jojoldu.book'
 version '1.0.4-SNAPSHOT-'+new Date().format("yyyyMMddHHmmss")
-sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -31,6 +30,7 @@ dependencies {
 
     implementation('org.springframework.boot:spring-boot-starter-data-jpa')
     implementation("org.mariadb.jdbc:mariadb-java-client")
+    implementation('org.springframework.boot:spring-boot-starter-jdbc')
     implementation('com.h2database:h2')
 
 //    implementation('org.springframework.boot:spring-boot-starter-oauth2-client') // 권한 관련
