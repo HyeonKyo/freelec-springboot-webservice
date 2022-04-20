@@ -1,0 +1,15 @@
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- index.js 추가 -->
+<script src="/js/app/index.js"></script>
+</body>
+</html>
+
+<!-- js코드는 footer에 두는 이유는 화면 로딩 먼저 시키기 위함이다.
+    HTML은 위에서부터 읽어가며 작업하는데 코드량이 많아져서 무거워진 js코드를
+    수행하느라 화면의 내용인 BODY가 출력되지 않는 현상이 발생한다.
+    따라서 화면 출력을 하는 HTML, CSS코드를 위쪽에서 먼저 랜더링하고, js관련 코드는 뒤쪽에 위치시킨다.
+
+    bootstrap.js는 jquery에 의존하므로 jquery먼저 선언해준다.
+ -->
